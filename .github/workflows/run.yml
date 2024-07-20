@@ -27,7 +27,7 @@ jobs:
         env:
           SSH_INFO: ${{ secrets.SSH_INFO }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
-          MAIL: ${{ ifocal@hotmail.com }}
+          MAIL: ${{ secrets.mail}}
           PUSH: ${{ secrets.PUSH }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
