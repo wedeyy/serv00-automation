@@ -2,8 +2,8 @@ name: SSH Login
 
 on:
   schedule:
-    - cron: '0 11 5 * *'  # 每月的 5号 北京时间 19 点运行
-  workflow_dispatch:
+   # * is a special character in YAML so you have to quote this string
+    - cron:  '30 5,17 * * *'
 
 jobs:
   ssh-login:
@@ -27,7 +27,7 @@ jobs:
         env:
           SSH_INFO: ${{ secrets.SSH_INFO }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
-          MAIL: ${{ secrets.MAIL }}
+          MAIL: ${{ ifocal@hotmail.com }}
           PUSH: ${{ secrets.PUSH }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
